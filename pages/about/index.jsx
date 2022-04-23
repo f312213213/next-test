@@ -7,6 +7,7 @@ function About () {
         <Head>
           <title>About Me</title>
           <meta property="og:title" content="About Me" key="title" />
+          <meta name="description" content="All about me." />
         </Head>
         <div className={'text-xl'}>
           ABOUT
