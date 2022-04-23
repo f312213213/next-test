@@ -7,8 +7,8 @@ const Navbar = () => {
         <Link href={'/'} replace>
           HOME
         </Link>
-        <Link href={'/about'} replace>
-          ABOUT
+        <Link href={'/posts'} replace>
+          POSTS
         </Link>
       </nav>
   )
