@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 
-const CandidateCard = ({ candidate, path }) => {
+const CandidateCard = ({ candidate, path, routerParams, name }) => {
   return (
       <div className={'w-full h-96 rounded flex flex-col items-center shadow-lg bg-custom-200 dark:bg-custom-400 transition relative'}>
          <img className={'h-1/2'} src={candidate.photoLink?.stringValue || candidate.photoURL?.stringValue} alt={candidate.introduction.stringValue} />
@@ -15,7 +15,10 @@ const CandidateCard = ({ candidate, path }) => {
           <div>
             目前票數：{candidate.voteCount.integerValue}
           </div>
-          <Link href={`/sports/${path}`}>
+          <Link
+              href={`/sports/[sport]/[gender]/[place]/?sport=${routerParams.sport}&gender=${routerParams.gender}&place=${routerParams.place}&uid_m=${name}`}
+              as={`/sports/${path}`}
+          >
             <a className={'bg-custom-500 p-2 rounded hover:bg-custom-700 transition'}>
               個人頁面
             </a>
