@@ -10,7 +10,7 @@ function Posts ({ posts }) {
           <meta property="og:title" content="Posts" key="title" />
           <meta name="description" content="All post can get." />
         </Head>
-        <div className={'grid pt-4 grid-cols-4 gap-4'}>
+        <div className={'grid pt-4 grid-cols-1 md:grid-cols-4 gap-4'}>
           {
             posts.map((post) => <PostItem key={post.id} post={post}/>)
           }
