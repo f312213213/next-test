@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Meta from '../../../../../components/Meta'
-import CandidateCard from './components/CandidateCard'
+import CandidateCard from '../../../../../components/CandidateCard'
 
 const VoteAllPage = ({ candidates }) => {
   return (
