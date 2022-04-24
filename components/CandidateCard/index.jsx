@@ -18,6 +18,7 @@ const CandidateCard = ({ candidate, path, routerParams, name }) => {
           <Link
               href={`/sports/[sport]/[gender]/[place]/?sport=${routerParams.sport}&gender=${routerParams.gender}&place=${routerParams.place}&uid_m=${name}`}
               as={`/sports/${path}`}
+              scroll={false}
           >
             <a className={'bg-custom-500 p-2 rounded hover:bg-custom-700 transition'}>
               個人頁面
