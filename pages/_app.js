@@ -8,14 +8,14 @@ import ModalBase from '../components/ModalBase'
 
 function CrashNext ({ Component, pageProps }) {
   return (
-      <>
+      <React.StrictMode>
         <Navbar />
         <ModalBase />
         <Layout>
           <Component {...pageProps} />
         </Layout>
         <Footer />
-      </>
+      </React.StrictMode>
   )
 }
 

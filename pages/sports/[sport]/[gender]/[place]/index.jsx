@@ -3,6 +3,7 @@ import { useRouter } from 'next/router'
 
 import Meta from '../../../../../components/Meta'
 import CandidateCard from '../../../../../components/CandidateCard'
+import ModalBase from '../../../../../components/ModalBase'
 
 const VoteAllPage = ({ candidates }) => {
   const router = useRouter().query
