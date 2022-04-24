@@ -7,7 +7,7 @@ const Sports = () => {
   return (
       <>
         <Meta title={'選擇球類 | 北大明星賽 2022'} description={'選擇要投的球類'} />
-        <div className={'h-full flex flex-col justify-evenly overflow-hidden divide-y divide-gray-500 bg-custom-200'}>
+        <div className={'h-96 w-2/3 rounded flex flex-col justify-evenly overflow-hidden divide-y divide-gray-500 bg-custom-200'}>
           <SportType type={'男籃'} path={'basketball/male/candidates'} />
           <SportType type={'女籃'} path={'basketball/female/candidates'} />
           <SportType type={'男排-舉球員'} path={'volleyball/male/setter'} />

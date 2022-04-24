@@ -3,12 +3,16 @@ import React from 'react'
 import Meta from '../../../../../../components/Meta'
 
 const SinglePlayer = ({ candidate }) => {
-  console.log(candidate)
   return (
       <>
         <Meta title={`${candidate.fields.username.stringValue} | 北大明星賽 2022`} description={candidate.fields.introduction.stringValue} />
-        <div>
-          {candidate.fields.username.stringValue}
+
+        <div className={'w-10/12 my-2 shadow-xl flex flex-col justify-center items-center p-4 space-y-3 rounded-2xl border-2 border-custom-600'}>
+          <h1 className={'text-2xl'}>{candidate.fields.username.stringValue}</h1>
+          <img className={'h-80'} src={candidate.fields.photoLink?.stringValue || candidate.fields.photoURL?.stringValue} alt={candidate.fields.introduction?.stringValue} />
+          <p className="text-gray-700 text-base text-center">
+            { candidate.fields.introduction.stringValue }
+          </p>
         </div>
       </>
   )
