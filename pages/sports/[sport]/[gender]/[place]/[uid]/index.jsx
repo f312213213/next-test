@@ -6,7 +6,7 @@ const SinglePlayer = ({ candidate }) => {
   console.log(candidate)
   return (
       <>
-        <Meta title={'candidate.fields.username.stringValue | 北大明星賽 2022'} description={candidate.fields.introduction.stringValue} />
+        <Meta title={`${candidate.fields.username.stringValue} | 北大明星賽 2022`} description={candidate.fields.introduction.stringValue} />
         <div>
           {candidate.fields.username.stringValue}
         </div>
