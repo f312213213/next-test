@@ -4,10 +4,10 @@ import Link from 'next/link'
 const Navbar = () => {
   return (
       <nav className={'w-full p-4 absolute flex justify-around bg-black text-white'}>
-        <Link href={'/'} replace>
+        <Link href={'/'}>
           HOME
         </Link>
-        <Link href={'/posts'} replace>
+        <Link href={'/posts'}>
           POSTS
         </Link>
       </nav>

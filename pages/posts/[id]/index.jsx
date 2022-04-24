@@ -18,11 +18,23 @@ const SinglePost = ({ post }) => {
   )
 }
 
-export const getServerSideProps = async (context) => {
+export const getStaticProps = async (context) => {
   const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${context.params.id}`)
   const post = await response.json()
   return {
     props: { post }
+  }
+}
+
+export const getStaticPaths = async () => {
+  const response = await fetch('https://jsonplaceholder.typicode.com/posts')
+  const posts = await response.json()
+
+  const ids = posts.map((post) => post.id)
+  const paths = ids.map((id) => ({ params: { id: id.toString() } }))
+  return {
+    paths,
+    fallback: false
   }
 }
 
