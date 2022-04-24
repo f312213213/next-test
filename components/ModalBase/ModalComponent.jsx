@@ -33,6 +33,8 @@ const ModalComponent = () => {
     }
   }, [])
   return (
+      // FIXME
+      // 開啟 modal 後會跳到最上面
       <>
         <Meta title={`${candidate.fields?.username?.stringValue} | 北大明星賽 2022`} description={candidate.fields?.introduction?.stringValue} />
 
