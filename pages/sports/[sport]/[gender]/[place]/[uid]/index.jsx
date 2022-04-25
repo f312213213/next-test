@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 import Meta from '../../../../../../components/Meta'
 
@@ -9,8 +10,10 @@ const SinglePlayer = ({ candidate }) => {
 
         <div className={'w-full md:w-10/12 my-2 shadow-xl flex flex-col justify-center items-center py-4 space-y-3 rounded-2xl border-2 border-custom-600'}>
           <h1 className={'text-2xl'}>{candidate.fields.username.stringValue}</h1>
-          <img className={'h-1/2 w-auto'} src={candidate.fields.photoLink?.stringValue || candidate.fields.photoURL?.stringValue} alt={candidate.fields.introduction?.stringValue} />
-          <p className="text-gray-700 text-base text-center">
+          <div className={'h-96 w-full relative'}>
+             <Image layout={'fill'} objectFit={'contain'} src={candidate.fields.photoLink?.stringValue || candidate.fields.photoURL?.stringValue} alt={candidate.fields.introduction?.stringValue} />
+          </div>
+          <p className="text-gray-700 text-base text-center p-4">
             { candidate.fields.introduction.stringValue }
           </p>
         </div>
