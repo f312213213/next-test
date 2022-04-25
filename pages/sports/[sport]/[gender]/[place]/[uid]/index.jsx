@@ -18,13 +18,12 @@ const SinglePlayer = ({ candidate }) => {
   )
 }
 
-export const getStaticProps = async (context) => {
+export const getServerSideProps = async (context) => {
   const { sport, gender, place, uid } = context.params
   const response = await fetch(`https://firestore.googleapis.com/v1/projects/ntpu-all-star/databases/(default)/documents/${sport}/${gender}/${place}/${uid}`)
   const candidate = await response.json()
   return {
-    props: { candidate },
-    revalidate: 10
+    props: { candidate }
   }
 }
 

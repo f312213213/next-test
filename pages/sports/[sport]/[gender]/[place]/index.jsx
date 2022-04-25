@@ -32,13 +32,12 @@ const VoteAllPage = ({ candidates }) => {
   )
 }
 
-export const getStaticProps = async (context) => {
+export const getServerSideProps = async (context) => {
   const { sport, gender, place } = context.params
   const response = await fetch(`https://firestore.googleapis.com/v1/projects/ntpu-all-star/databases/(default)/documents/${sport}/${gender}/${place}?orderBy=voteCount desc&pageSize=100`)
   const candidates = await response.json()
   return {
-    props: { candidates },
-    revalidate: 10
+    props: { candidates }
   }
 }
 
