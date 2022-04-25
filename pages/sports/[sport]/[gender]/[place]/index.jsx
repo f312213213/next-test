@@ -3,7 +3,6 @@ import { useRouter } from 'next/router'
 
 import Meta from '../../../../../components/Meta'
 import CandidateCard from '../../../../../components/CandidateCard'
-import Logo from '../../../../../public/logo.png'
 
 const VoteAllPage = ({ candidates }) => {
   const pathName = useRouter().asPath
@@ -40,7 +39,6 @@ const VoteAllPage = ({ candidates }) => {
   return (
       <>
         <Meta title={`${renderPlaceText()} | 北大明星賽 2022`} description={`${renderPlaceText()} | 北大明星賽 2022`} />
-        <img src={Logo} className={'hidden'} alt=""/>
         <div className={'flex-col min-h-screen'}>
           <h1 className={'m-4 text-center w-full text-sm'}>
             這個分區是：<span className={'bg-white p-2 dark:text-custom-900'}>{renderPlaceText()}</span>
