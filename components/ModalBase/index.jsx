@@ -3,6 +3,7 @@ import { useRouter } from 'next/router'
 import Image from 'next/image'
 
 import Meta from '../Meta'
+import Loader from '../../public/imgLoader.gif'
 
 const ModalBase = () => {
   const [candidate, setCandidate] = React.useState({})
@@ -53,7 +54,7 @@ const ModalBase = () => {
                 <div className={'flex flex-col justify-center items-center space-y-3 bg-white w-8/12 rounded-xl md:rounded-none md:w-3/5 md:h-screen p-4 overflow-y-auto'}>
                   <h1 className={'text-xl'}>{candidate.fields?.username.stringValue}</h1>
                   <div className={'h-56 md:h-96 w-full relative'}>
-                    <Image layout={'fill'} objectFit={'contain'} src={candidate.fields?.photoLink?.stringValue || candidate.fields?.photoURL?.stringValue} alt={candidate.fields?.introduction?.stringValue} />
+                    <Image layout={'fill'} objectFit={'contain'} src={(candidate.fields?.photoLink?.stringValue || candidate.fields?.photoURL?.stringValue) ?? Loader} alt={candidate.fields?.introduction?.stringValue} />
                   </div>
                   <p className="text-gray-700 text-sm text-center">
                     { candidate.fields?.introduction.stringValue }

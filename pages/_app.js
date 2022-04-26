@@ -1,6 +1,8 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 import NProgress from 'nprogress'
+import Head from 'next/head'
+
 import '../styles/nprogress.css'
 import '../styles/globals.css'
 
@@ -21,7 +23,6 @@ function CrashNext ({ Component, pageProps }) {
 
   return (
       <React.StrictMode>
-
         <Navbar />
         <ModalBase />
         <Layout>
