@@ -6,7 +6,7 @@ import Meta from '../../../../../../components/Meta'
 const SinglePlayer = ({ candidate }) => {
   return (
       <>
-        <Meta title={`${candidate.fields.username.stringValue} | 北大明星賽 2022`} description={candidate.fields.introduction.stringValue} />
+        <Meta title={`${candidate.fields.username.stringValue} | 北大明星賽 2022`} description={candidate.fields.introduction.stringValue} needPic={false} />
 
         <div className={'w-full md:w-10/12 my-2 shadow-xl flex flex-col justify-center items-center py-4 space-y-3 rounded-2xl border-2 border-custom-600'}>
           <h1 className={'text-2xl'}>{candidate.fields.username.stringValue}</h1>
