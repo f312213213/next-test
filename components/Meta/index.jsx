@@ -9,7 +9,7 @@ const Meta = ({ title = '首頁 | 北大明星賽 2022', description = '這是�
         <title>{title}</title>
         <meta property="og:title" content={title} key="title" />
         <meta name="description" content={description} />
-        <meta name={'og:image'} content={Logo.src}/>
+        <meta name={'og:image'} content={'https://firebasestorage.googleapis.com/v0/b/ntpu-all-star.appspot.com/o/%E8%87%89%E6%9B%B8%E5%B0%81%E9%9D%A2.png?alt=media&token=6500e777-f18c-42af-8d3a-7436d4871f16'}/>
       </Head>
   )
 }
