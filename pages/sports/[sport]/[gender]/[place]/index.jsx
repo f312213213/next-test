@@ -1,8 +1,8 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 
-import Meta from '../../../../../components/Meta'
-import CandidateCard from '../../../../../components/CandidateCard'
+import Meta from '@/components/Meta'
+import CandidateCard from '@/components/CandidateCard'
 
 const VoteAllPage = ({ candidates }) => {
   const pathName = useRouter().asPath

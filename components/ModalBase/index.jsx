@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 import Image from 'next/image'
 
 import Meta from '../Meta'
-import Loader from '../../public/imgLoader.gif'
+import Loader from '@/public/imgLoader.gif'
 
 const ModalBase = () => {
   const [candidate, setCandidate] = React.useState({})

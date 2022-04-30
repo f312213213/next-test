@@ -1,7 +1,7 @@
 import React from 'react'
 
-import Meta from '../../components/Meta'
-import SportType from '../../components/SportType/SportType'
+import Meta from '@/components/Meta'
+import SportType from '@/components/SportType/SportType'
 
 const Sports = () => {
   return (

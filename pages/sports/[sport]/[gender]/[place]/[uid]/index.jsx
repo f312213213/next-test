@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 
-import Meta from '../../../../../../components/Meta'
+import Meta from '@/components/Meta'
 
 const SinglePlayer = ({ candidate }) => {
   return (
